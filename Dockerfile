@@ -4,5 +4,4 @@ RUN pip install --no-cache-dir wtee
 
 EXPOSE 8080/tcp
 
-ENTRYPOINT [ "tail" ]
-CMD [ "-f", "/log", "|", "wtee", "|", "nl" ]
+ENTRYPOINT "tail -f /logfile | wtee | nl"
