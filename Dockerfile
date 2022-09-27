@@ -4,4 +4,4 @@ RUN pip install --no-cache-dir wtee
 
 EXPOSE 8080/tcp
 
-CMD [ "tail", "-f", "/log" ]
+CMD [ "tail", "-f", "/file.log" ]
