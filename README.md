@@ -6,18 +6,17 @@ This is a docker implmentation of [wtee](https://github.com/gvalkov/wtee).
 
 ```
   wtee:
-    image:  ghcr.io/tchilderhose/docker-wtee
+    image:  ghcr.io/tchilderhose/docker-wtee:latest
     container_name: wtee
     ports:
       - "8080:8080/tcp"
     environment:
-      - ENV WTEE_LINES=50
-      - ENV WTEE_PORT=8080
-      - ENV WTEE_FILEPATH="/file.log"
+      - WTEE_LINES=50
+      - WTEE_PORT=8080
+      - WTEE_FILEPATH="/file.log"
     volumes:
-      - /path/to/log.log:/file.log:ro
+      - /path/to/file.log:/file.log:ro
 ```
-
 
 ## Reverse Proxy
 
