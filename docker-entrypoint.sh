@@ -1,3 +1,3 @@
 #!/bin/sh
 
-tail -f /file.log | wtee -b 0.0.0.0:8080 | nl
+tail -$WTEE_LINES -f $WTEE_FILEPATH | wtee -b 0.0.0.0:$WTEE_PORT | nl
